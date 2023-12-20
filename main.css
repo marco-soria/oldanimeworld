@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+
+/* Estilo de la imagen */
+.imgAW{
+    height: 60px;
+}
+/* Estilos del NAVBAR */
+.container-nav{
+    background-color: red;
+}
+
+/* Estilos carousel */
+.carousel h5, p{
+    color: black;
+    font-weight: bold;
+    font-size: 45px;
+}
+.carousel-control-next-icon{
+    color: black;
+}
