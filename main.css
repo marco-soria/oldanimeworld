@@ -4,18 +4,25 @@
 }
 body{
     background-color: black;
+    
 }
 
 /* Estilo de la imagen */
 .imgAW{
     height: 60px;
+    margin-left: 300px;
 }
 /* Estilos del NAVBAR */
 .container-nav{
     background-color: red;
 }
+.collapse{
+    margin-left: 700px;
+    font-size: 30px;
 
+}
 /* Estilos carousel */
+
 .carousel h5, p{
     color: black;
     font-weight: bold;
@@ -24,12 +31,28 @@ body{
 .carousel-control-next-icon{
     color: black;
 }
+.carousel-control-prev{
+background-color: black;
+margin: 30px;
+width: 30px;
+border-radius: 50px;
+
+}
+.carousel-control-next{
+    background-color: black;
+    margin: 30px;
+    width: 30px;
+    border-radius: 50px;
+    }
 /* Estilos de la carta */
+.card-news h2{
+    color: white;
+    /* font-family: "chinese",Sans-serif; */
+}
 .card-news{
     margin: 30px;
     display: flex;
     flex-direction: column;
-    
 
 }
 .container-cards{
@@ -38,6 +61,17 @@ body{
     margin: 30px;
     justify-content: space-between;
 }
-.card-news p{
+.card-news a{
     font-size: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    position:absolute;
+    top: 70%;
+    left: 40%;
+    transform: translate(-60%,-10%);
+
+}
+.card-news a:hover{
+    color:red ;
 }
