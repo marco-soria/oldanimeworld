@@ -1,8 +1,31 @@
+.mainbg{
+    height: 1200px;
+    object-fit: cover;
+    width: 100%;
+}
+
 .carousel-item img {
     height: 300px; /* Ajusta la altura según tus necesidades */
     object-fit: cover;
-    /* width: 100%;
-    display: block; */  /* Añadido para asegurar que se comporten como elementos de bloque */
+    width: 100%;
+    
+}
+
+.card-img-overlay h1 {
+    color:rgb(255, 1, 1);
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    font-size: 200px;
+    
+    
+}
+
+.card-img-overlay a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    font-size: 45px;
+    font-weight: bold;
+    overflow: auto;
 }
 
 
