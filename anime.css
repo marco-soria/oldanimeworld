@@ -28,6 +28,35 @@
     overflow: auto;
 }
 
+/* Estilo para el fondo del cuadro de diálogo modal */
+#synopsisModal .modal-content {
+    background-color: black;
+    color: white;
+  }
+  
+  /* Estilo para el fondo del botón de cierre del modal */
+  #synopsisModal .btn-close {
+    color: white;
+  }
+  
+  /* Estilo para el fondo del cuerpo del modal */
+  #synopsisContent {
+    background-color: black;
+    color: white;
+  }
+  
+  /* Estilo para el botón de cierre del modal */
+  #synopsisModal .modal-footer .btn-secondary {
+    background-color: #6f42c1; /* Puedes cambiar esto al color que desees */
+    color: white;
+  }
+  
+  /* Estilo para el botón de cierre del modal al pasar el ratón sobre él */
+  #synopsisModal .modal-footer .btn-secondary:hover {
+    background-color: #55308e; /* Puedes cambiar esto al color que desees */
+    color: white;
+  }
+
 
 
 @media (max-width: 767px) {

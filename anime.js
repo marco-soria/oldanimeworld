@@ -36,23 +36,21 @@ carruseles.forEach((carrusel) => {
 
 // fecth api jikan
 const animeContainer = document.querySelector("#row-ranking");
-const url= "https://api.jikan.moe/v4/top/anime"
+const url = "https://api.jikan.moe/v4/top/anime";
 
 const obtenerAnime = async () => {
-  
   const response = await fetch(`${url}?limit=12`);
   const data = await response.json();
-  console.log(data.data);
   setAnimeView(data.data);
-  
 };
 
-obtenerAnime()
+obtenerAnime();
 
 const setAnimeView = (results) => {
   // Ordenar los resultados por ranking
   results.sort((a, b) => a.rank - b.rank);
   results.forEach((result, index) => {
+    const synopsisString = JSON.stringify(result.synopsis).replace(/'/g, "&apos;").replace(/"/g, "&quot;");
     const html = `
       <div class="col-md-4 mt-3">
         <div class="card" style="height: 1100px;">
@@ -64,6 +62,9 @@ const setAnimeView = (results) => {
             <h6 class="text-title">N. ${result.rank}</h6>
             <h4 class="text-title">${result.title}</h4>
             <p class="text-title">Score: ${result.score}</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#synopsisModal" data-synopsis="${synopsisString}">
+              Ver Sinopsis
+            </button>
           </div>
         </div>
       </div>
@@ -71,32 +72,35 @@ const setAnimeView = (results) => {
 
     animeContainer.innerHTML += html;
   });
-};
-/* const setAnimeView = (results) => {
-  
 
-  results.map(async (result, index) => {
-    const html = `
-    <div class = "col-md-3 mt-3">
-    <div class ='card'>
-    <img class = 'card-img-top mt-2'
-    width = '200'
-    height = '200'
-    src='${url.data.images.webp.large}${index + 1}'>
-    <div class = 'card-body text-center'>
-    <h6 class ='text-title'>N. ${index + 1}</h6>
-    <h4 class ='text-title'>${result.name}</h4>
-    </div>
-    
-      </div>
-      </div>
-    `;
-
-    animeContainer.innerHTML += html;
+  // Agregar evento click a los botones después de cargar el contenido
+  document.querySelectorAll('.btn-primary').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const synopsis = this.getAttribute('data-synopsis');
+      cargarSinopsis(synopsis);
+    });
   });
 };
- */
 
+const cargarSinopsis = (synopsis) => {
+  const synopsisContent = document.getElementById("synopsisContent");
+  const cleanSynopsis = synopsis.replace(/\\n/g, '<br>').replace(/\\"/g, '"');
+  synopsisContent.innerHTML = `<p>${cleanSynopsis}</p>`;
+};
+
+
+
+let exsynopsis = "After a horrific alchemy experiment goes wrong in the Elric household, brothers Edward and Alphonse are left in a catastrophic new reality. Ignoring the alchemical principle banning human transmutation, the boys attempted to bring their recently deceased mother back to life. Instead, they suffered brutal personal loss: Alphonse's body disintegrated while Edward lost a leg and then sacrificed an arm to keep Alphonse's soul in the physical realm by binding it to a hulking suit of armor. The brothers are rescued by their neighbor Pinako Rockbell and her granddaughter Winry. Known as a bio-mechanical engineering prodigy, Winry creates prosthetic limbs for Edward by utilizing automail, a tough, versatile metal used in robots and combat armor. After years of training, the Elric brothers set off on a quest to restore their bodies by locating the Philosopher's Stone—a powerful gem that allows an alchemist to defy the traditional laws of Equivalent Exchange. As Edward becomes an infamous alchemist and gains the nickname Fullmetal, the boys' journey embroils them in a growing conspiracy that threatens the fate of the world. [Written by MAL Rewrite]"
+
+/* const obtainSynopsis = async (url) => {
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log("detalle", data);
+
+  pokemonName.innerHTML = data.data.title;
+  pokemonSynopsis.innerHTML = data.data.synopsis;
+};
+ */
 
 
 
