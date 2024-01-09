@@ -28,6 +28,26 @@
     overflow: auto;
 }
 
+/* Estilo para la sección de búsqueda */
+#row-search-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  /* Estilo para las cards de búsqueda */
+  .search-card {
+    width: 25%;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para la imagen dentro de la card */
+  .search-card img {
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+  }
+  
 /* Estilo para el fondo del cuadro de diálogo modal */
 #synopsisModal .modal-content {
     background-color: black;
@@ -56,7 +76,6 @@
     background-color: #55308e; /* Puedes cambiar esto al color que desees */
     color: white;
   }
-
 
 
 @media (max-width: 767px) {

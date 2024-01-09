@@ -21,6 +21,51 @@
                 </div>
             </div>
         </div>
+    </div>
+<!-- section search -->
+    <section class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Search</h2>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="searchInput" placeholder="Search Anime">
+                    <button class="btn btn-primary" type="button" id="searchButton">Search Anime</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenedor de resultados de búsqueda -->
+        <div class="row" id="row-search-results"></div>
+    </section>
+<!-- section ranking -->
+    <section class="container-fluid">
+        <div class="row" id="row-ranking">
+         <div class="col-md-12">
+            <h2>Ranking</h2>
+         </div>
+        </div>
+
+        <div class="modal fade" id="synopsisModal" tabindex="-1" aria-labelledby="synopsisModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <p class="modal-title" id="synopsisModalLabel">Synopsis</p>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="synopsisContent">
+                  <!-- Sinopsis se cargará aquí -->
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+    </section>
+
+<!-- section carousel -->
+    <div class="container-fluid g-0">    
         <div class="row">
             <div class="column">
                 <p>Action</p>
@@ -505,36 +550,6 @@
             </div>
         </div>
 
-
-        <section class="container-fluid">
-            <div class="row" id="row-ranking">
-             <div class="col-md-12">
-                <h2>Ranking</h2>
-             </div>
-            </div>
-
-            <div class="modal fade" id="synopsisModal" tabindex="-1" aria-labelledby="synopsisModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-xl">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <p class="modal-title" id="synopsisModalLabel">Synopsis</p>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body" id="synopsisContent">
-                      <!-- Sinopsis se cargará aquí -->
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            
-        </section>
-        
-
-       
-          
     </div>
 
 
