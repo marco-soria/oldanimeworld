@@ -1,0 +1,28 @@
+.modoDarck {
+  margin-right: 30px;
+}
+
+.noche {
+  background-color: black;
+}
+
+.dia {
+  background-color: white;
+}
+.noche,
+.dia {
+  transition: 0.7s;
+  cursor: pointer;
+  
+}
+
+.modoDarck img {
+  margin-left: 10px;
+  width: 20px;
+  border-radius: 50px;
+ background-image:url() ;
+}
+.modoDarck img:hover {
+  transform: scale(1.9, 1.9);
+}
+
