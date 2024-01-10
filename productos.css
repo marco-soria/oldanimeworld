@@ -1,0 +1,68 @@
+/* -------texto-sobre---imagenes-----  */
+.productos_mein h2, button{
+  position: absolute;
+  z-index: 4;
+  margin-left: 90px;
+
+}
+.productos_mein h2{
+  /* border: solid; */
+  margin-bottom: 50px;
+  font-size: 40px;
+  font-weight: 800;
+}
+.productos_mein button{
+  width: 130px;
+  height: 40px;
+  background: rgba(137, 43, 226, 0.655);
+ border: solid none;
+  border-radius: 20px;
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+ 
+}
+.productos_mein div{
+  text-align: center;
+  border: solid rgba(0, 247, 218, 0.966);
+  display: flex;
+  align-items: end;
+  
+
+margin-bottom: 50px;
+}
+
+ /* --finnn-----texto-sobre---imagenes--  */
+
+.productos_mein {
+    /* border: solid red; */
+    display: flex;
+    /* width: 1600px; */
+    height:530px;
+  }
+  .productos_mein img {
+    width: 0px;
+    flex-grow: 1;
+    opacity: .8;
+    transition: .7s ease;
+  }
+  
+  .productos_mein img:hover{
+      /* border: solid red; */
+      cursor:pointer;
+      width: 280px;
+      opacity: 1;
+      filter: contrast(120%);
+  }
+  
+  /* -----------marcas-------  */
+  .marcas {
+    padding: 45px;
+    /* border: solid red; */
+    display: flex;
+    justify-content: space-around;
+  }
+  .marcas img{
+    height: 38px;
+  }
+  /* -----------fin de marcas-------  */
